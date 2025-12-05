@@ -25,13 +25,13 @@ public class Solution {
                 fast=fast.next;
                 slow=slow.next;
             }
-            ListNode cyclestart = slow;
-            int index=0;
-             ListNode temp = head;
-            while(temp!=cyclestart){
-                temp=temp.next;
-                index++;
-            }
+            // ListNode cyclestart = slow;
+            // int index=0;
+            //  ListNode temp = head;
+            // while(temp!=cyclestart){
+            //     temp=temp.next;
+            //     index++;
+            // }
             return slow;}
         }return null;
       

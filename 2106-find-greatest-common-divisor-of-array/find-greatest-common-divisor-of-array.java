@@ -5,7 +5,7 @@ class Solution {
         int b = nums[nums.length-1];
         while(b!=0){
             
-           int  rem=a%b;
+            int rem=a%b;
             a=b;
             b=rem;
         }

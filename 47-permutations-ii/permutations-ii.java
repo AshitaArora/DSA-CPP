@@ -5,13 +5,16 @@ class Solution {
             return;
         }
         for(int i=0;i<nums.length;i++){
-          if(visited[i])continue;
-          if(i>0&&nums[i]==nums[i-1]&&!visited[i-1])continue;
-          visited[i]=true;
-          ds.add(nums[i]);
-          unique(nums,ds,ans,visited);
-          ds.remove(ds.size()-1);
-          visited[i]=false;
+            if(i>0&&nums[i]==nums[i-1]&&!visited[i-1]){
+                continue;
+            }
+          if(!visited[i]){
+            ds.add(nums[i]);
+            visited[i]=true;
+            unique(nums,ds,ans,visited);
+            visited[i]=false;
+            ds.remove(ds.size()-1);
+          }
 
 
         }
